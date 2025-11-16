@@ -1,0 +1,171 @@
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("3.png") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 192, 203, 0.25); /* soft pink overlay */
+    z-index: -1;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+nav .logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+    color: #ff69b4;
+    text-decoration: underline;
+}
+
+nav a i {
+    margin-right: 8px;
+    color: #ff69b4;
+}
+
+/* ===== SERVICES SECTION ===== */
+.services {
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto 50px auto; /* top margin to avoid navbar overlap */
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 48px;
+    color: #ff69b4;
+    margin-bottom: 50px;
+}
+
+/* ===== SERVICE CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    cursor: pointer;
+}
+
+.card i {
+    font-size: 50px;
+    color: #ff69b4;
+    margin-bottom: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #ff69b4;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    background: #ff69b4;
+}
+
+.card:hover h3,
+.card:hover p,
+.card:hover i {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: black;
+    color: #ff4da6;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero {
+        width: 95%;
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-icons {
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+}
+

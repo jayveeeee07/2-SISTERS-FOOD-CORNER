@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Sisters Food Corner</title>
+    <style>
+        /* Full-screen splash */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff8f0; /* background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Logo styling */
+        #logo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Optional fade in effect */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+
+    <!-- Redirect after 2 seconds -->
+    <script>
+        setTimeout(function() {
+            window.location.href = "home.html";
+        }, 2000); // 2000ms = 2 seconds
+    </script>
+</head>
+<body>
+    <img id="logo" src="image.png" alt="2 Sisters Logo">
+</body>
+</html>

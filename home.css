@@ -1,0 +1,190 @@
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("image.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Pink transparent overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background: rgba(255, 192, 203, 0.25);
+    z-index: -1;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    display: flex;
+    justify-content: space-between; /* logo left, menu right */
+    align-items: center;
+    padding: 25px 50px;             /* taller navbar */
+    background: transparent;        /* fully transparent */
+    width: 100%;
+    position: fixed;                /* stay on top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo image */
+nav .logo img {
+    width: 70px;                    /* circular logo */
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Navbar menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 40px;               /* spacing between links */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;                 /* bigger font */
+    transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+    color: #ff69b4;                  /* pink hover */
+    text-decoration: underline;
+}
+
+nav a i {
+    margin-right: 8px; /* space between icon and text */
+    color: #ff69b4;    /* optional: pink color for icons */
+}
+
+
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    margin: 140px auto 0 auto;      /* push below fixed navbar */
+    border-radius: 15px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* ===== HERO ICONS ===== */
+.hero-icons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.icon-box {
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.icon-box img {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 0 5px rgba(255,105,180,0.5));
+    transition: 0.3s;
+}
+
+.icon-box p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.icon-box:hover img {
+    transform: scale(1.2);
+}
+
+.icon-box:hover p {
+    color: #ff69b4;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    background: #ff69b4;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: black;
+    color: #ff69b4;
+    border: 2px solid #ff69b4;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #000;
+    color: #ff4da6;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero {
+        width: 95%;
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-icons {
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+}
